@@ -1,4 +1,4 @@
-# javascript重点sleep
+# javascript中的sleep
 sleep函数作用是让线程休眠，等到指定时间在重新唤起。
 因为JS是单线程，可以利用一个伪死循环阻塞主线程。
 
