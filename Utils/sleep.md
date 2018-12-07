@@ -22,8 +22,3 @@ function sleep(delay) {
 }
 ```
 
-用generator实现
-
-```javascript
-
-```
