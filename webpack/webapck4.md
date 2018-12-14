@@ -1,15 +1,44 @@
-#记录一次webpack4的升级
+#记一次webpack4升级
 * 1、autopefixer  
+
+看了很多文档要在根目录下配置postcss.config.js，配置完，不生效。
+
+下面这种配置更简单：
 ```javascript
 {loader: 'postcss-loader',options:{plugins:[require("autoprefixer")("last 100 versions")]}}
 ```
-* 2、文件修改导致编译失败服务断掉---ts版本问题
+* 2、文件修改导致编译失败服务断掉---ts版本不兼容 调整版本
 
-* 3、ejs报变量is not defined
+* 3、html用到ejs模板，会报模板中的变量is not defined   需要获取到变量  待解决兼容办法
 
-* 4、
+* 4、报错
 
+  1、HotModuleReplacementPlugin        未安装 webpack-dev-server
 
+![image-20181213154408141](/Users/liuchunjie/Library/Application Support/typora-user-images/image-20181213154408141.png)
+ 2、OccurrenceOrderPlugin  
+
+![image-20181213155920694](/Users/liuchunjie/Library/Application Support/typora-user-images/image-20181213155920694.png)
+
+3、DefinePlugin![image-20181213160929657](/Users/liuchunjie/Library/Application Support/typora-user-images/image-20181213160929657.png)
+
+4、NodeTemplatePlugin
+
+![image-20181213163534074](/Users/liuchunjie/Library/Application Support/typora-user-images/image-20181213163534074.png)
+
+5、版本兼容问题  npm install extract-text-webpack-plugin@next 
+
+![image-20181213170514311](/Users/liuchunjie/Library/Application Support/typora-user-images/image-20181213170514311.png)
+
+6、版本兼容问题  webpack4.0.0-alpha.4与html-webpack-plugin兼容问题
+
+使用下面的命令重新安装html-webpack-plugin 
+
+```
+yarn add webpack-contrib/html-webpack-plugin -D
+```
+
+![image-20181213190008545](/Users/liuchunjie/Library/Application Support/typora-user-images/image-20181213190008545.png)
 
 
 
