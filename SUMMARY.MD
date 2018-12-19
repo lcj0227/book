@@ -6,6 +6,7 @@
   * [promise](es6/promise.md)
   * [generator](es6/generator.md)
   * [babel](es6/babel解析.md)
+  * [Proxy](es6/Proxy.md)
 * [git](git/1-git简介.md)
   * [git简介](git/1-git简介.md)
   * [git安装](git/2-git安装.md)
@@ -14,3 +15,4 @@
 * utils
   * [sleep](Utils/sleep.md)
   * [debounce](Utils/debounce.md)
+
