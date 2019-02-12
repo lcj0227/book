@@ -16,4 +16,4 @@
 
   ## 常用术语
 
-![img](https://km.sankuai.com/api/file/70649050/113103484)
+![img](../img/clip_0.png)
